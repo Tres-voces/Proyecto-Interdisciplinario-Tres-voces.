@@ -1,0 +1,1447 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap');
+
+
+/* ==============================
+   COLORES PRINCIPALES
+============================== */
+
+:root {
+
+    --blue: #315C7D;
+    --dark-blue: #23465F;
+    --light-blue: #DCECF7;
+
+    --background: #F4F7F9;
+    --white: #FFFFFF;
+
+    --text: #263238;
+    --muted: #61717C;
+
+    --border: #D9E3E9;
+
+    --shadow: 0 10px 30px rgba(35, 70, 95, 0.10);
+
+    --radius: 22px;
+}
+
+
+/* ==============================
+   CONFIGURACIÓN GENERAL
+============================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    font-family: 'Nunito', sans-serif;
+
+    background: var(--background);
+
+    color: var(--text);
+
+    line-height: 1.6;
+}
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+button,
+select,
+textarea {
+    font-family: inherit;
+}
+
+
+/* ==============================
+   ENCABEZADO
+============================== */
+
+.header {
+
+    width: 100%;
+
+    padding: 20px 7%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    background: var(--white);
+
+    border-bottom: 1px solid var(--border);
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+}
+
+
+.logo {
+
+    font-size: 1.35rem;
+
+    font-weight: 900;
+
+    color: var(--dark-blue);
+
+    letter-spacing: 0.5px;
+}
+
+
+.nav {
+
+    display: flex;
+
+    gap: 28px;
+}
+
+
+.nav a {
+
+    font-weight: 700;
+
+    color: var(--muted);
+
+    transition: 0.2s;
+}
+
+
+.nav a:hover {
+
+    color: var(--blue);
+}
+
+
+/* ==============================
+   PORTADA
+============================== */
+
+.hero {
+
+    min-height: 600px;
+
+    padding: 90px 7%;
+
+    display: grid;
+
+    grid-template-columns: 1.3fr 0.7fr;
+
+    gap: 60px;
+
+    align-items: center;
+
+    background:
+
+        radial-gradient(
+            circle at 85% 20%,
+            var(--light-blue),
+            transparent 35%
+        ),
+
+        var(--background);
+}
+
+
+.hero-text {
+
+    max-width: 720px;
+}
+
+
+.project-label {
+
+    display: inline-block;
+
+    padding: 8px 16px;
+
+    border-radius: 50px;
+
+    background: var(--light-blue);
+
+    color: var(--blue);
+
+    font-size: 0.82rem;
+
+    font-weight: 900;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 18px;
+}
+
+
+.hero h1 {
+
+    font-size: clamp(3rem, 7vw, 6rem);
+
+    line-height: 0.95;
+
+    font-weight: 900;
+
+    color: var(--dark-blue);
+
+    margin-bottom: 20px;
+}
+
+
+.hero h2 {
+
+    font-size: 1.7rem;
+
+    color: var(--blue);
+
+    margin-bottom: 20px;
+}
+
+
+.hero p {
+
+    max-width: 650px;
+
+    font-size: 1.08rem;
+
+    color: var(--muted);
+
+    margin-bottom: 30px;
+}
+
+
+.button {
+
+    display: inline-block;
+
+    padding: 14px 24px;
+
+    border: none;
+
+    border-radius: 50px;
+
+    background: var(--blue);
+
+    color: var(--white);
+
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.button:hover {
+
+    background: var(--dark-blue);
+
+    transform: translateY(-2px);
+}
+
+
+.hero-card {
+
+    padding: 45px 35px;
+
+    background: var(--white);
+
+    border-radius: 30px;
+
+    box-shadow: var(--shadow);
+
+    border: 1px solid var(--border);
+
+    text-align: center;
+}
+
+
+.speech-icon {
+
+    width: 90px;
+
+    height: 90px;
+
+    margin: 0 auto 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: var(--light-blue);
+
+    border-radius: 50%;
+
+    font-size: 2.7rem;
+}
+
+
+.hero-card h3 {
+
+    color: var(--dark-blue);
+
+    font-size: 1.5rem;
+
+    margin-bottom: 10px;
+}
+
+
+.hero-card p {
+
+    color: var(--muted);
+}
+
+
+/* ==============================
+   SECCIONES
+============================== */
+
+.main-options,
+.content-section,
+.about-section,
+.contact-section,
+.manifesto {
+
+    padding: 90px 7%;
+}
+
+
+.section-heading {
+
+    max-width: 700px;
+
+    margin-bottom: 45px;
+}
+
+
+.section-heading span,
+.about-text > span {
+
+    color: var(--blue);
+
+    font-size: 0.82rem;
+
+    font-weight: 900;
+
+    letter-spacing: 1.5px;
+}
+
+
+.section-heading h2,
+.about-text h2 {
+
+    color: var(--dark-blue);
+
+    font-size: clamp(2rem, 4vw, 3rem);
+
+    line-height: 1.1;
+
+    margin: 10px 0 15px;
+}
+
+
+.section-heading p,
+.about-text p {
+
+    color: var(--muted);
+
+    font-size: 1.05rem;
+}
+
+
+/* ==============================
+   TRES TARJETAS
+============================== */
+
+.cards {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+.card {
+
+    background: var(--white);
+
+    padding: 32px;
+
+    border-radius: var(--radius);
+
+    border: 1px solid var(--border);
+
+    box-shadow: var(--shadow);
+
+    transition: 0.2s;
+}
+
+
+.card:hover {
+
+    transform: translateY(-5px);
+}
+
+
+.card-icon {
+
+    width: 62px;
+
+    height: 62px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: var(--light-blue);
+
+    border-radius: 18px;
+
+    font-size: 1.8rem;
+
+    margin-bottom: 22px;
+}
+
+
+.card h3 {
+
+    color: var(--dark-blue);
+
+    font-size: 1.35rem;
+
+    margin-bottom: 12px;
+}
+
+
+.card p {
+
+    color: var(--muted);
+
+    margin-bottom: 25px;
+}
+
+
+.card-button,
+.text-link {
+
+    color: var(--blue);
+
+    font-weight: 900;
+}
+
+/* ==============================
+   AVENTURA INTERACTIVA
+============================== */
+
+.adventure-section {
+
+    padding: 90px 7%;
+
+    background: var(--white);
+}
+
+
+.adventure-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+
+.adventure-card {
+
+    position: relative;
+
+    padding: 30px;
+
+    background: var(--background);
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius);
+
+    transition: 0.25s;
+
+    overflow: hidden;
+}
+
+
+.adventure-card:hover {
+
+    transform: translateY(-7px);
+
+    box-shadow: var(--shadow);
+}
+
+
+.adventure-number {
+
+    position: absolute;
+
+    top: 18px;
+
+    right: 20px;
+
+    font-size: 0.85rem;
+
+    font-weight: 900;
+
+    color: var(--blue);
+
+    opacity: 0.6;
+}
+
+
+.adventure-icon {
+
+    width: 65px;
+
+    height: 65px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: var(--light-blue);
+
+    border-radius: 18px;
+
+    font-size: 2rem;
+
+    margin-bottom: 22px;
+}
+
+
+.adventure-card h3 {
+
+    color: var(--dark-blue);
+
+    margin-bottom: 12px;
+
+    font-size: 1.3rem;
+}
+
+
+.adventure-card p {
+
+    color: var(--muted);
+
+    font-size: 0.95rem;
+}
+
+/* ==============================
+   BOTONES DE LA AVENTURA
+============================== */
+
+.adventure-button {
+
+    margin-top: 20px;
+
+    padding: 11px 18px;
+
+    border: none;
+
+    border-radius: 50px;
+
+    background: var(--blue);
+
+    color: var(--white);
+
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.adventure-button:hover {
+
+    background: var(--dark-blue);
+
+    transform: translateY(-2px);
+}
+
+
+/* ==============================
+   INFORMACIÓN DE LA AVENTURA
+============================== */
+
+.adventure-info {
+
+    max-width: 900px;
+
+    margin: 35px auto 0;
+
+    padding: 30px;
+
+    background: var(--light-blue);
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius);
+
+    text-align: center;
+}
+
+
+.adventure-info h3 {
+
+    color: var(--dark-blue);
+
+    font-size: 1.5rem;
+
+    margin-bottom: 10px;
+}
+
+
+.adventure-info p {
+
+    color: var(--muted);
+
+    max-width: 700px;
+
+    margin: 0 auto;
+}
+
+/* ==============================
+   SECCIÓN DE AYUDA
+============================== */
+
+.help-section {
+
+    margin: 20px 7% 80px;
+
+    padding: 45px;
+
+    background: var(--dark-blue);
+
+    border-radius: 28px;
+
+    color: var(--white);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+
+.help-section h2 {
+
+    font-size: 1.9rem;
+
+    max-width: 700px;
+
+    margin: 8px 0;
+}
+
+
+.help-section p {
+
+    opacity: 0.85;
+}
+
+
+.small-label {
+
+    font-size: 0.8rem;
+
+    font-weight: 900;
+
+    letter-spacing: 1px;
+}
+
+
+.light-button {
+
+    background: var(--white);
+
+    color: var(--dark-blue);
+
+    padding: 13px 22px;
+
+    border-radius: 50px;
+
+    font-weight: 900;
+
+    white-space: nowrap;
+}
+
+
+/* ==============================
+   FORMULARIO
+============================== */
+
+.alert-form {
+
+    max-width: 750px;
+
+    background: var(--white);
+
+    padding: 35px;
+
+    border-radius: var(--radius);
+
+    border: 1px solid var(--border);
+
+    box-shadow: var(--shadow);
+}
+
+
+.alert-form label {
+
+    display: block;
+
+    font-weight: 800;
+
+    color: var(--dark-blue);
+
+    margin-bottom: 8px;
+
+    margin-top: 20px;
+}
+
+
+.alert-form label:first-child {
+
+    margin-top: 0;
+}
+
+
+.alert-form select,
+.alert-form textarea {
+
+    width: 100%;
+
+    padding: 14px 16px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 14px;
+
+    outline: none;
+
+    color: var(--text);
+
+    background: var(--background);
+}
+
+
+.alert-form textarea {
+
+    resize: vertical;
+
+    margin-bottom: 20px;
+}
+
+
+.form-note {
+
+    margin-top: 15px;
+
+    font-size: 0.85rem;
+
+    color: var(--muted);
+}
+
+
+/* ==============================
+   RUTA DE ACCIÓN
+============================== */
+
+.route-section {
+
+    background: var(--light-blue);
+}
+
+
+.steps {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+
+.step {
+
+    background: var(--white);
+
+    padding: 28px;
+
+    border-radius: var(--radius);
+
+    border: 1px solid var(--border);
+}
+
+
+.step-number {
+
+    color: var(--blue);
+
+    font-weight: 900;
+
+    font-size: 1.1rem;
+}
+
+
+.step h3 {
+
+    color: var(--dark-blue);
+
+    margin: 10px 0;
+}
+
+
+.step p {
+
+    color: var(--muted);
+}
+
+
+/* ==============================
+   RECURSOS
+============================== */
+
+.resources {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+.resource-card {
+
+    background: var(--white);
+
+    padding: 32px;
+
+    border-radius: var(--radius);
+
+    border: 1px solid var(--border);
+
+    box-shadow: var(--shadow);
+}
+
+.resource-card {
+
+    transition: 0.25s;
+}
+
+
+.resource-card:hover {
+
+    transform: translateY(-6px);
+
+    box-shadow: var(--shadow);
+}
+
+
+.text-link {
+
+    display: inline-block;
+
+    transition: 0.2s;
+}
+
+
+.text-link:hover {
+
+    transform: translateX(4px);
+
+    color: var(--dark-blue);
+}
+
+
+.resource-icon {
+
+    font-size: 2rem;
+
+    margin-bottom: 15px;
+}
+
+
+.resource-card h3 {
+
+    color: var(--dark-blue);
+
+    margin-bottom: 10px;
+}
+
+
+.resource-card p {
+
+    color: var(--muted);
+
+    margin-bottom: 18px;
+}
+
+
+/* ==============================
+   COMPROMISO
+============================== */
+
+.manifesto {
+
+    background: var(--white);
+}
+
+
+.commitments {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 15px;
+
+    max-width: 850px;
+}
+
+
+.commitments div {
+
+    padding: 18px 20px;
+
+    background: var(--soft, #EEF5F9);
+
+    border-radius: 15px;
+
+    color: var(--dark-blue);
+
+    font-weight: 700;
+}
+
+/* ==============================
+   FUENTES
+============================== */
+
+.sources-section {
+
+    background: var(--background);
+}
+
+
+.sources-list {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+
+.source-item {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 18px;
+
+    padding: 25px;
+
+    background: var(--white);
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius);
+
+    box-shadow: var(--shadow);
+
+    transition: 0.2s;
+}
+
+
+.source-item:hover {
+
+    transform: translateY(-5px);
+}
+
+
+.source-item > span {
+
+    font-size: 1.8rem;
+}
+
+
+.source-item h3 {
+
+    color: var(--dark-blue);
+
+    margin-bottom: 5px;
+}
+
+
+.source-item p {
+
+    color: var(--muted);
+
+    font-size: 0.95rem;
+}
+
+/* ==============================
+   QUIÉNES SOMOS
+============================== */
+
+.about-section {
+
+    display: grid;
+
+    grid-template-columns: 1fr 0.7fr;
+
+    gap: 60px;
+
+    align-items: center;
+}
+
+
+.team-card {
+
+    background: var(--light-blue);
+
+    padding: 35px;
+
+    border-radius: 25px;
+
+    border: 1px solid var(--border);
+}
+
+
+.team-card h3 {
+
+    color: var(--dark-blue);
+
+    margin-bottom: 20px;
+
+    font-size: 1.5rem;
+}
+
+
+.team-card p {
+
+    padding: 9px 0;
+
+    color: var(--blue);
+}
+
+/* ==============================
+   DESAFÍO FINAL
+============================== */
+
+.challenge-section {
+
+    padding: 90px 7%;
+
+    background: var(--white);
+}
+
+
+.quiz-container {
+
+    max-width: 800px;
+
+    margin: 0 auto;
+
+    padding: 40px;
+
+    background: var(--background);
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius);
+
+    box-shadow: var(--shadow);
+}
+
+
+.quiz-progress {
+
+    color: var(--blue);
+
+    font-weight: 900;
+
+    margin-bottom: 25px;
+}
+
+
+#question-text {
+
+    color: var(--dark-blue);
+
+    font-size: 1.5rem;
+
+    margin-bottom: 25px;
+}
+
+
+.answers {
+
+    display: grid;
+
+    gap: 12px;
+
+    margin-bottom: 25px;
+}
+
+
+.answer-button {
+
+    width: 100%;
+
+    padding: 15px 18px;
+
+    border: 2px solid var(--border);
+
+    border-radius: 15px;
+
+    background: var(--white);
+
+    color: var(--text);
+
+    text-align: left;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.answer-button:hover {
+
+    border-color: var(--blue);
+
+    transform: translateX(3px);
+}
+
+
+.answer-button.selected {
+
+    border-color: var(--blue);
+
+    background: var(--light-blue);
+}
+
+
+.quiz-button {
+
+    margin-top: 5px;
+}
+
+
+.quiz-result {
+
+    display: none;
+
+    max-width: 800px;
+
+    margin: 0 auto;
+
+    padding: 50px 35px;
+
+    background: var(--light-blue);
+
+    border-radius: var(--radius);
+
+    text-align: center;
+}
+
+
+.result-icon {
+
+    font-size: 3.5rem;
+
+    margin-bottom: 15px;
+}
+
+
+.quiz-result h2 {
+
+    color: var(--dark-blue);
+
+    margin-bottom: 12px;
+}
+
+
+.quiz-result p {
+
+    color: var(--muted);
+
+    margin-bottom: 25px;
+}
+
+/* ==============================
+   CONTACTO
+============================== */
+
+.contact-section {
+
+    background: var(--light-blue);
+}
+
+
+.contact-card {
+
+    max-width: 700px;
+
+    padding: 30px;
+
+    background: var(--white);
+
+    border-radius: var(--radius);
+
+    display: flex;
+
+    gap: 20px;
+
+    align-items: center;
+
+    border: 1px solid var(--border);
+
+    box-shadow: var(--shadow);
+}
+
+
+.contact-icon {
+
+    width: 65px;
+
+    height: 65px;
+
+    border-radius: 18px;
+
+    background: var(--light-blue);
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 1.8rem;
+}
+
+
+.contact-card h3 {
+
+    color: var(--dark-blue);
+
+    margin-bottom: 5px;
+}
+
+
+.contact-card p {
+
+    color: var(--muted);
+
+    margin: 5px 0;
+}
+
+
+.contact-card a {
+
+    color: var(--blue);
+
+    font-weight: 700;
+
+    transition: 0.2s;
+}
+
+
+.contact-card a:hover {
+
+    color: var(--dark-blue);
+}
+
+/* ==============================
+   PIE DE PÁGINA
+============================== */
+
+.footer {
+
+    background: var(--dark-blue);
+
+    color: var(--white);
+
+    padding: 40px 7%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 25px;
+}
+
+
+.footer h3 {
+
+    margin-bottom: 5px;
+}
+
+
+.footer p {
+
+    opacity: 0.8;
+}
+
+
+.footer a {
+
+    font-weight: 800;
+}
+
+
+/* ==============================
+   RESPONSIVE
+============================== */
+
+@media (max-width: 900px) {
+
+    .hero,
+    .about-section {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .cards,
+    .resources {
+
+        grid-template-columns: 1fr;
+    }
+.sources-list {
+
+    grid-template-columns: 1fr;
+}
+
+.adventure-grid {
+
+    grid-template-columns: repeat(2, 1fr);
+}
+
+
+    .steps {
+
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .header {
+
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+
+    .nav {
+
+        gap: 15px;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+
+    .hero {
+
+        padding: 65px 6%;
+    }
+
+
+    .hero h1 {
+
+        font-size: 3.2rem;
+    }
+
+
+    .main-options,
+    .content-section,
+    .about-section,
+    .contact-section,
+    .manifesto {
+
+        padding: 65px 6%;
+    }
+
+
+    .help-section {
+
+        margin: 10px 6% 60px;
+
+        padding: 30px;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+
+    .steps {
+
+        grid-template-columns: 1fr;
+    }
+
+.adventure-grid {
+
+    grid-template-columns: 1fr;
+}
+
+    .commitments {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .footer {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+}
